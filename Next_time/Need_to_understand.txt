@@ -1,0 +1,4 @@
+can u explain these concept, Trapping Rain Water, Next Greater Element, Find the Peak Element, Majority Element (Boyer–Moore), Subarray Sum Equals K, Kadane’s Algorithm (Maximum Subarray Sum), Count Frequency of Each Element
+
+
+shortcut - need-to_understand/next_Time - this will create a folder name next_Time which will hold a file inside name need-to_understand

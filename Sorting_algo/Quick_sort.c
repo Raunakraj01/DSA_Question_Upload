@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 //Swaping using Function!
 void swap(int* a, int* b) {
@@ -42,25 +43,31 @@ void printArray(int arr[], int size) {
 
 //main function using fixed value of array
 int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int arr[100], len;
+    printf("Enter the number of elements: ");
+    scanf("%d",&len);
+
+    printf("Enter The element of array: ");
+    for(int i = 0; i<len; i ++){
+        scanf("%d",&arr[i]);
+    }
+    int n = len;
     printf("Original array: ");
     printArray(arr, n);
 
+    //Start the Timer
+    clock_t start = clock();
+
     quickSort(arr, 0, n - 1);
+
+
+    //Stop the Timmer
+    clock_t end = clock();
 
     printf("Sorted array: ");
     printArray(arr, n);
+
+    double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
+    printf("Execution time: %f seconds\n", time_taken);
     return 0;
-
-    
-//if taking array input from user!
-//if takking input then just replace n with len and everything will be same
-
-// int len, arr2[100];
-// printf("Enter the len of array: ");
-
-// for(int i = 0; i <len ; i ++){
-//     scanf("%d", &arr2);
-// }
 }
